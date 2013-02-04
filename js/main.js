@@ -8,14 +8,18 @@ $("#notSubbed").accordion({
 });
 
 $(document).ready(function() {
-  // Handler for .ready() called.
+  // not going to work. see http://jqueryui.com/droppable/#shopping-cart when less sleep-deprived.
     $('#notSubbed h4').draggable({
-    	appendTo : 'body'
+    	appendTo : 'body',
+    	helper: 'clone'
     });
     $('#subbed').droppable({ 
-    	drop: function ( event, ui ) {
-    		ui.draggable.remove();
-    	}});
+    	accept: ":not(.ui-sortable-helper)",
+      	drop: function( event, ui ) {
+        	$( this ).find( "#subbed").remove();
+        	$( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
+      }
+    });
 });
 
 /*TODOS: 
