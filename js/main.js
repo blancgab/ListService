@@ -1,10 +1,12 @@
 $( "#subbed" ).accordion({
 	collapsible : true,
-	heightStyle: "content"
+	heightStyle: "content",
+	active : false
 });
 $("#notSubbed").accordion({
 	collapsible : true,
-	heightStyle: "content"
+	heightStyle: "content",
+	active : false
 });
 
 $(document).ready(function() {
@@ -17,8 +19,14 @@ $(document).ready(function() {
     	accept: ":not(.ui-sortable-helper)",
       	drop: function( event, ui ) {
         	$( this ).find( "#subbed").remove();
-        	$( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
-      }
+        	$( "<h4></h4>" ).text( ui.draggable.text() ).appendTo(this);
+        	$("<div><p></p></div>").text(ui.draggable.next().text()).appendTo(this);
+        	$(this).accordion('destroy').accordion({
+        		collapsible : true,
+        		heightStyle: "content",
+        		active : false
+        	});
+        }
     });
 });
 
