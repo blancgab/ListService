@@ -12,21 +12,24 @@ Gabriel Blanco '15
 
 FRONTEND TODOs:
 
-make and maintain a JSON object that's 
+- [ ] make and maintain a JSON object that's 
 specific to the user that would hold all info for the 
 lists that a given user is subscribed to. this can be as 
 simple as a listing of some ID of the lists.
 
-a JSON that would have the full list of 
+- [ ] a JSON that would have the full list of 
 all lists, with their ID + name + description. May choose
 to populate dynamically the lists, instead of hardcoding.
 
-enable dragging from one list to the other, update the 
-user JSON with this.
+ - [x] enable dragging from one list to the other
 
-sorting by different categories.
+- [ ] update the user JSON with this dragging
 
-search feature.
+- [ ] alphabetical sort within categories 
+
+- [ ] sorting by different categories.
+
+- [ ] search feature.
 
 
 BACKEND TODOs:
