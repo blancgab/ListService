@@ -21,7 +21,7 @@ simple as a listing of some ID of the lists.
 all lists, with their ID + name + description. May choose
 to populate dynamically the lists, instead of hardcoding.
 
- - [x] enable dragging from one list to the other
+- [x] enable dragging from one list to the other
 
 - [ ] update the user JSON with this dragging
 
