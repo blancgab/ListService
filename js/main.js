@@ -21,8 +21,6 @@ $(document).ready(function() {
         	$( this ).find( "#subbed").remove();
         	$( "<h4></h4>" ).text( ui.draggable.text() ).appendTo(this);
         	$("<div><p></p></div>").text(ui.draggable.next().text()).appendTo(this);
-        	ui.draggable.next().remove();
-        	ui.draggable.remove();
         	$(this).accordion('destroy').accordion({
         		collapsible : true,
         		heightStyle: "content",
