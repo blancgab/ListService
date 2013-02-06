@@ -65,3 +65,17 @@ border: 1px solid #999999;
 background: rgba(255, 0, 0, .2);
 color: #212121;
 }
+
+/* Gabe Formatting Fix */
+.navbar .brand {
+	margin-left: 20px;
+}
+
+@media(max-width:979px){
+	.navbar-fixed-top, .navbar-fixed-bottom{
+		position: fixed;
+	}
+	.navbar .btn-navbar {
+		margin-right: 26px
+	}
+}
