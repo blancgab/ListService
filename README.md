@@ -35,26 +35,20 @@ to populate dynamically the lists, instead of hardcoding.
 BACKEND TODOs:
 
 DATABASE CLASS
-
--   Stores dictionary of users and dictionary of clubs
+   Stores dictionary of users and dictionary of clubs
 with ability to add and remove from each.
 
-
 USERS
-
--   Add users to database of accounts upon registering
+   Add users to database of accounts upon registering
 (include name, email, password list of subscriptions).
--   Update "subscriptions" list of a user when user subscribes/unsubscribes,
+
+   Update "subscriptions" list of a user when user subscribes/unsubscribes,
 AND send info between our server and Mailman to actually accomplish
 the transaction (or look into how to integrate our code with Mailman API)
 
-
 SUBSCRIPTIONS
-
--   To be contained in a user's list of subscriptions, with "PENDING" boolean,
+   To be contained in a user's list of subscriptions, with "PENDING" boolean,
 and with the neccessary link to unsubscribe
 
-
 CLUBS
-
--Store the name, blurb, subscribe link, subscribers, category
+   Store the name, blurb, subscribe link, subscribers, category
