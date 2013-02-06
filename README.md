@@ -9,6 +9,11 @@ Polina Viro '15
 Ved Tanavde '15
 Gabriel Blanco '15
 
+Columbia Mailman Important URLS's:
+-https://lists.columbia.edu/mailman/listinfo
+--list of clubs using mailman
+-https://www1.columbia.edu/sec-cgi-bin/samurai/maillist?mode=mymailmanlists&ticketid=yjtFkRJwpsywdsslS9SzBmXjhQs1QfDz4j44KPQ
+--mailman login for students
 
 FRONTEND TODOs:
 
