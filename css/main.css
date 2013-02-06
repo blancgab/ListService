@@ -1,5 +1,9 @@
-body {
-	padding-top: 60px; /*60px to make the container go all the way to the bottom of the topbar */
+.body {
+	/*padding-top: 60px; 60px to make the container go all the way to the bottom of the topbar */
+<<<<<<< HEAD
+}
+=======
+	padding-bottom: 40px;
 }
 
 .indScroll{
@@ -40,3 +44,6 @@ border: 1px solid #999999;
 background: rgba(0, 255, 0, .2);
 color: #212121;
 }
+
+
+>>>>>>> drag-drop-layout

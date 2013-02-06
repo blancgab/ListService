@@ -7,17 +7,6 @@ $("#notSubbed").accordion({
 	heightStyle: "content"
 });
 
-$(document).ready(function() {
-  // Handler for .ready() called.
-    $('#notSubbed h4').draggable({
-    	appendTo : 'body'
-    });
-    $('#subbed').droppable({ 
-    	drop: function ( event, ui ) {
-    		ui.draggable.remove();
-    	}});
-});
-
 /*TODOS: 
 
 make and maintain a JSON object that's 
