@@ -27,6 +27,5 @@ for l in range(len(lines)):
 
         clubList.append(club)
 
-out = open('bigList.txt', 'w')
-out.write(str(clubList))
-out.close()
+with open('bigList.json', 'wb') as fp:
+    json.dump(clubList, fp)
