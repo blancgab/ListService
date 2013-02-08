@@ -8,10 +8,12 @@ body {
 	position : absolute;
 }
 
+
 .rightBar{
-	left: 32%;
-	width: 65% !important;
+	left: 42%;
+	/*width: 65% !important;*/
 }
+
 
 #subbed{
 	border-radius: 5px;

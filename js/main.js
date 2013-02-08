@@ -97,7 +97,6 @@ $(document).ready(function() {
 });
 
 
-// TODO: 
 
 // to populate the lists:
 
