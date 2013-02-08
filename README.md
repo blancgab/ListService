@@ -17,49 +17,22 @@ Columbia Mailman Important URLS's:
 
 FRONTEND TODOs:
 
-- [ ] make and maintain a JSON object that's 
-specific to the user that would hold all info for the 
-lists that a given user is subscribed to. this can be as 
-simple as a listing of some ID of the lists.
+- [ ] make the list headers not scroll
 
-- [ ] a JSON that would have the full list of 
-all lists, with their ID + name + description. May choose
-to populate dynamically the lists, instead of hardcoding.
+- [ ] fix styling in accordance with Ved's suggestions
 
-- [x] enable dragging from one list to the other
+- [ ] login page (asking for email only)
 
-- [ ] update the user JSON with this dragging
+- [ ] fix repeated drag/drop
 
-- [ ] alphabetical sort within categories 
+- [ ] action button!
 
-- [ ] sorting by different categories.
+- [ ] reset button?
 
-- [ ] search feature.
-
+- [ ] if time permits, 3 column page as well?
 
 BACKEND TODOs:
 
-DATABASE CLASS
+- [ ] script that'll sub / unsub from a given list for a given email
 
--   Stores dictionary of users and dictionary of clubs
-with ability to add and remove from each.
-
-
-USERS
-
--   Add users to database of accounts upon registering
-(include name, email, password list of subscriptions).
--   Update "subscriptions" list of a user when user subscribes/unsubscribes,
-AND send info between our server and Mailman to actually accomplish
-the transaction (or look into how to integrate our code with Mailman API)
-
-
-SUBSCRIPTIONS
-
--   To be contained in a user's list of subscriptions, with "PENDING" boolean,
-and with the neccessary link to unsubscribe
-
-
-CLUBS
-
--Store the name, blurb, subscribe link, subscribers, category
+- [ ] find the changes between original and current list states for the action button
