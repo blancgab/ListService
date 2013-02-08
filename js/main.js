@@ -52,3 +52,13 @@ $(document).ready(function() {
         }
     });
 });
+
+
+// TODO: 
+
+// to populate the lists:
+
+function populateAll() {
+
+}
+

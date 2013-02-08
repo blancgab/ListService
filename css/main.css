@@ -5,6 +5,12 @@ body {
 .indScroll{
 	overflow: auto;
 	height: 100%;
+	position : absolute;
+}
+
+.rightBar{
+	left: 32%;
+	width: 65% !important;
 }
 
 #subbed{
