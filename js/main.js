@@ -54,8 +54,16 @@ function ulGetInfo() {
     return ulFull
 };
 
+function getEmail(){
+    if(email == '' || email == undefined){
+        $('#emailDialog').dialog('open');
+    }
+}
+
+
+
 $('#emailDialog').dialog({
-            autoOpen: true,
+            autoOpen: false,
             dialogClass: 'popupDialog',
             draggable: false,
             resizable: false,
@@ -76,7 +84,7 @@ $('#emailDialog').dialog({
                 }
             }
         });
-
+getEmail(); 
 populateAll();
 
 $( "#subbed" )
@@ -180,6 +188,7 @@ function populateAll() {
 // to do all the changes. goes through the subbed list, checks if there are intersections with old unsubbed list, calls appropriate python scripts
 
 function action() {
+    getEmail();
     sList = $('#subbed').children('.group').children('h4');
     newSub = [];
     for(var i = 0; i < sList.length; i++){ 
@@ -208,7 +217,7 @@ function action() {
             }
         }
         if(!isIn){
-            console.log(oldSub[j].name+' has to be unsubscribed!');
+            console.log(oldSub[j].url+' has to be unsubscribed!');
         }
     }
 }
