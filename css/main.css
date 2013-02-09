@@ -1,13 +1,28 @@
 body {
 	padding-top: 60px; /*60px to make the container go all the way to the bottom of the topbar */
+	position: relative;
+	height: 100%;
+	min-height: 500px;
+}
+
+#fixScroll{
+	position: absolute;
+	top: 60px;
+	bottom: 0px;
+	width: 100%;
 }
 
 .indScroll{
 	overflow: auto;
-	height: 90%;
+	height: 100%;
 	position : absolute;
 }
 
+.buttons-row{
+	position: absolute;
+	top: 90%;
+	left: 45%;
+}
 
 .rightBar{
 	left: 42%;
@@ -18,13 +33,15 @@ body {
 #subbed{
 	border-radius: 5px;
 	background-color: rgba(0, 255, 0, .1);
-	height: 85%;
+	overflow: scroll;
+	height: 100%;
 }
 
 #notSubbed{
 	border-radius: 5px;
 	background-color: rgba(255, 0, 0, .1);
-	height: 85%;
+	overflow: scroll;
+	height: 100%;
 }
 
 #subbed .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {

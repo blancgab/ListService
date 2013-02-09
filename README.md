@@ -17,7 +17,7 @@ Columbia Mailman Important URLS's:
 
 FRONTEND TODOs:
 
-- [ ] make the list headers not scroll
+- [x] make the list headers not scroll
 
 - [ ] fix styling in accordance with Ved's suggestions
 
