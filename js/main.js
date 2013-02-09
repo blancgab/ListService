@@ -204,7 +204,12 @@ function action() {
             }
         }
         if(!isIn){
-            console.log(newSub[j]+' has to be subscribed!');
+            for(var n = 0; n < bl.length; n++) {
+                if(newSub[j] == bl[n].name || newSub[j] == bl[n].desc){
+                    console.log(bl[n].url+' has to be subscribed!');
+                    break;
+                }
+            }
         }
     }
 
