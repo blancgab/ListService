@@ -46,7 +46,7 @@ body {
 
 #subbed .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 border: 1px solid #d3d3d3;
-background: rgba(59, 224, 132, .84);
+background: rgba(50, 218, 124, .82);
 color: #FFFFFF;
 }
 
@@ -71,7 +71,7 @@ color: #000000;
 
 #notSubbed .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 border: 1px solid #d3d3d3;
-background: rgba(253, 78, 71, .95);
+background: rgba(235, 43, 54, .89);
 color: #FFFFFF;
 }
 
