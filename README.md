@@ -19,13 +19,13 @@ FRONTEND TODOs:
 
 - [x] make the list headers not scroll
 
-- [ ] fix styling in accordance with Ved's suggestions
+- [x] fix styling in accordance with Ved's suggestions
 
 - [ ] login page (asking for email only)
 
-- [ ] fix repeated drag/drop
+- [x] fix repeated drag/drop
 
-- [ ] action button!
+- [x] action button!
 
 - [ ] reset button?
 
