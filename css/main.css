@@ -161,7 +161,13 @@ color: black;
 
 /* Gabe Formatting Fix */
 .navbar .brand {
-	margin-left: 20px;
+	margin-left: 0;
+	font-size: 40px;
+}
+
+.container-fluid {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 @media(max-width:979px){
