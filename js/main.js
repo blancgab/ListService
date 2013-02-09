@@ -180,6 +180,28 @@ function populateAll() {
     }
 }
 
+$('#actionDialog').dialog({
+            autoOpen: false,
+            dialogClass: 'popupDialog',
+            draggable: false,
+            resizable: false,
+            modal: true,
+            width: '500px',
+            title: 'Congratulations!',
+            open: function (event, ui) {
+                $('#actionDialog').removeClass('hide');
+            },
+            close: function (event, ui) {
+                $(this).dialog('destroy').remove();
+            },
+            buttons: {
+                'Sweet!': function (e) {
+                    $(this).dialog('close');
+                    $('#emailDialog').addClass('hide');
+                    location.reload();
+                }
+            }
+        });
 
 // to do all the changes. goes through the subbed list, checks if there are intersections with old unsubbed list, calls appropriate python scripts
 
@@ -202,6 +224,9 @@ function action() {
         if(!isIn){
             for(var n = 0; n < bl.length; n++) {
                 if(newSub[j] == bl[n].name || newSub[j] == bl[n].desc){
+                    postUrl = 'https://lists.columbia.edu/mailman/subscribe'+bl[n].url;
+                    $.ajax({type: "POST", url: postUrl, data:{'email': email, 'digest':0, 'email-button': 'Subscribe'}})
+                    $( "<li></li>" ).text( 'Unsubscribed from '+newSub[j] ).appendTo($('#actionDialog ul'));
                     console.log(bl[n].url+' has to be subscribed!');
                     break;
                 }
@@ -218,9 +243,20 @@ function action() {
             }
         }
         if(!isIn){
+            postUrl = 'https://lists.columbia.edu/mailman/options/cuttc'+oldSub[j].url;
+            $.ajax({type: "POST", url: postUrl, data:{'email': email, 'language' : 'en', 'password': '', 'login-unsub' : 'Unsubscribe'}})
+            if(oldSub[j].desc != ''){
+                $( "<li></li>" ).text( 'Subscribed to '+ oldSub[j].desc ).appendTo($('#actionDialog ul'));
+            }
+            else{
+                $( "<li></li>" ).text( 'Subscribed to '+ oldSub[j].name ).appendTo($('#actionDialog ul'));
+            }
             console.log(oldSub[j].url+' has to be unsubscribed!');
         }
     }
+
+    $('#actionDialog').dialog('open');
+
 }
 
 

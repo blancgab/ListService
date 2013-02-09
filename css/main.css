@@ -155,6 +155,9 @@ background: rgba(255, 255, 204, 0.9);
 color: black;
 }
 
+.ul{
+	list-style-type: circle;
+}
 
 /* Gabe Formatting Fix */
 .navbar .brand {
