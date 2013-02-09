@@ -58,14 +58,14 @@ color: #FFFFFF;
 
 #subbed .ui-widget-content {
 border: 1px solid #aaaaaa;
-background: rgba(120, 231, 67, .95);
+background: rgba(255, 255, 255, .01);
 color: #FFFFFF;
 }
 
 #subbed .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
 border: 1px solid #999999;
 background: rgba(43, 194, 109, .82);
-color: #000000;
+color: #FFFFFF;
 }
 
 
@@ -83,7 +83,7 @@ color: #212121;
 
 #notSubbed .ui-widget-content {
 border: 1px solid #aaaaaa;
-background: rgba(255, 0, 0, .01);
+background: rgba(255, 255, 255, .01);
 color: #222222;
 }
 
