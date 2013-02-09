@@ -22,7 +22,7 @@ FINAL TODOs:
 
 - [ ] style fix: when a thing is dragged, it is default jQuery accordion thingy
 
-- [ ] style fix: email dialog. just need to fill out a class for that one.
+- [x] style fix: email dialog. just need to fill out a class for that one.
 
 - [ ] tone the button colors a bit down. we'll be demoing on a projector screen that's
 going to be MUCH brighter than our computers.  

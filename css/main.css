@@ -106,6 +106,43 @@ color: #FFFFFF;
 	opacity: .9 !important;
 }
 
+
+
+.popupDialog.ui-dialog .ui-dialog-content select#itineraryAssignGuestSelect {
+        max-width:180px;
+}
+
+
+.popupDialog .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix {
+        background:#EEE;
+        border:none;
+        color:#333;
+        margin:0px;
+        height:32px;
+        padding:3px 10px 3px 10px;
+        line-height:28px;
+        -moz-border-radius: 6px 6px 0px 0px;
+        -webkit-border-radius: 6px 6px 0px 0px;
+        border-radius: 6px 6px 0px 0px;
+}
+
+.popupDialog .ui-dialog-titlebar .ui-dialog-title {
+        font-weight: bold;
+}
+
+.popupDialog .ui-widget-content {
+        background:white;
+        border:none;
+        color:#333;
+        border-radius: 6px;
+}
+
+.popupDialog .dialog-ui.ui-dialog-content.ui-widget-content {
+	padding:0;
+}
+
+
+
 /* Gabe Formatting Fix */
 .navbar .brand {
 	margin-left: 20px;
