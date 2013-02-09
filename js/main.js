@@ -38,6 +38,20 @@ var bl = [{"url": "/19c-colloquium", "name": "19c-colloquium", "desc": ""},
 
 
 var userlist = ["/bhakticlub", "/bionet", "/buddhist-seminar", "/campusincontext", "/caribbeanstudents", "/cblr-editors"];
+var oldSub = ulGetInfo();
+
+function ulGetInfo() {
+    ulFull = [];
+    for(var i = 0; i < userlist.length; i++){
+        for(var j = 0; j < bl.length; j++){
+            if(userlist[i] == bl[j].url) {
+                ulFull.push(bl[j]);
+                break;
+            }
+        }
+    }
+    return ulFull
+};
 
 
 
@@ -101,7 +115,7 @@ $(document).ready(function() {
 
 
 
-// to populate the lists:
+// to populate both lists. This assumes the format that's given in the hardcoded data above.
 
 function populateAll() {
     /* taking out, as AJAX calls can't be made to local files
@@ -142,6 +156,42 @@ function populateAll() {
     }
 }
 
+
+// to do all the changes. goes through the subbed list, checks if there are intersections with old unsubbed list, calls appropriate python scripts
+
+function action() {
+    sList = $('#subbed').children('h4');
+    newSub = [];
+    for(var i = 0; i < sList.length; i++){ 
+        newSub.push($(sList[i]).text());
+    }
+
+    for(var j = 0; j < newSub.length; j++){
+        isIn = false;
+        for(var k = 0; k < oldSub.length; k++){
+            if(newSub[j] == oldSub[k].name || newSub[j] == oldSub[k].desc) {
+                isIn = true;
+                break;
+            }
+        }
+        if(!isIn){
+            console.log(newSub[j]+' has to be subscribed!');
+        }
+    }
+
+    for(var j = 0; j < oldSub.length; j++){
+        isIn = false;
+        for(var k = 0; k < newSub.length; k++){
+            if(newSub[k] == oldSub[j].name || newSub[k] == oldSub[j].desc) {
+                isIn = true;
+                break;
+            }
+        }
+        if(!isIn){
+            console.log(oldSub[j].name+' has to be unsubscribed!');
+        }
+    }
+}
 
 
 

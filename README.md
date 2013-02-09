@@ -35,4 +35,4 @@ BACKEND TODOs:
 
 - [x] script that'll sub / unsub from a given list for a given email
 
-- [ ] find the changes between original and current list states for the action button
+- [x] find the changes between original and current list states for the action button
