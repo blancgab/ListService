@@ -243,7 +243,7 @@ function action() {
             }
         }
         if(!isIn){
-            postUrl = 'https://lists.columbia.edu/mailman/options/cuttc'+oldSub[j].url;
+            postUrl = 'https://lists.columbia.edu/mailman/options'+oldSub[j].url;
             $.ajax({type: "POST", url: postUrl, data:{'email': email, 'language' : 'en', 'password': '', 'login-unsub' : 'Unsubscribe'}})
             if(oldSub[j].desc != ''){
                 $( "<li></li>" ).text( 'Unsubscribed from '+ oldSub[j].desc ).appendTo($('#actionDialog ul'));
