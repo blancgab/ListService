@@ -57,61 +57,56 @@ function ulGetInfo() {
 
 populateAll();
 
-$( "#subbed" ).accordion({
-	collapsible : true,
-	heightStyle: "content",
-	active : false
-});
-$("#notSubbed").accordion({
-	collapsible : true,
-	heightStyle: "content",
-	active : false
-});
-
-$(document).ready(function() {
-
-	// drag from not subscribed to subscribed
-    $('#notSubbed h4').draggable({
-    	appendTo : 'body',
-    	helper: 'clone'
-    });
-    $('#subbed').droppable({ 
-    	accept: ":not(.ui-sortable-helper)",
-      	drop: function( event, ui ) {
-        	$( this ).find( "#subbed").remove();
-        	$( "<h4></h4>" ).text( ui.draggable.text() ).appendTo(this);
-        	$("<div><p></p></div>").text(ui.draggable.next().text()).appendTo(this);
-        	ui.draggable.next().remove();
-        	ui.draggable.remove();
-        	$(this).accordion('destroy').accordion({
-        		collapsible : true,
-        		heightStyle: "content",
-        		active : false
-        	});
+$( "#subbed" )
+    .accordion({
+        header: "h4",
+        collapsible : true,
+        heightStyle: "content",
+        active : false
+    })
+    .sortable({
+        handle: "h4",
+        stop: function( event, ui ) {
+          // IE doesn't register the blur when sorting
+          // so trigger focusout handlers to remove .ui-state-focus
+          ui.item.children( "h4" ).triggerHandler( "focusout" );
+        },
+        connectWith: "#notSubbed",
+        appendTo: '#fixScroll',
+        helper: 'clone',
+        forceHelperSize: true,
+        start: function(event, ui){
+            ui.helper.css({
+                /*fix the CSS here*/
+            });
         }
     });
 
-    // drag from subscribed to not subscribed. maybe not?
-    $('#subbed h4').draggable({
-    	appendTo : 'body',
-    	helper: 'clone'
-    });
-    $('#notSubbed').droppable({ 
-    	accept: ":not(.ui-sortable-helper)",
-      	drop: function( event, ui ) {
-        	$( this ).find( "#notSubbed").remove();
-        	$( "<h4></h4>" ).text( ui.draggable.text() ).appendTo(this);
-        	$("<div><p></p></div>").text(ui.draggable.next().text()).appendTo(this);
-        	ui.draggable.next().remove();
-        	ui.draggable.remove();
-        	$(this).accordion('destroy').accordion({
-        		collapsible : true,
-        		heightStyle: "content",
-        		active : false
-        	});
+$("#notSubbed")
+    .accordion({
+        header: 'h4',
+        collapsible : true,
+        heightStyle: "content",
+        active : false
+    })
+    .sortable({
+        handle: "h4",
+        stop: function( event, ui ) {
+          // IE doesn't register the blur when sorting
+          // so trigger focusout handlers to remove .ui-state-focus
+          ui.item.children( "h4" ).triggerHandler( "focusout" );
+        },
+        connectWith: "#subbed",
+        appendTo: '#fixScroll',
+        helper: 'clone',
+        forceHelperSize: true,
+        start: function(event, ui){
+            ui.helper.css({
+                /*fix the CSS here*/
+            });
         }
     });
-});
+
 
 
 
@@ -133,24 +128,27 @@ function populateAll() {
             }
         }
 
+
         if(isIn){
+            $('<div class="group">').appendTo($('#subbed'))
             if(bl[i].desc != ''){
-                $( "<h4></h4>" ).text( bl[i].desc ).appendTo($('#subbed'));
-                $("<div><p></p></div>").text(bl[i].name).appendTo($('#subbed'));
+                $( "<h4></h4>" ).text( bl[i].desc ).appendTo($('#subbed .group:last-child'));
+                $("<div><p></p></div>").text(bl[i].name).appendTo($('#subbed .group:last-child'));
             }
             else{
-                $( "<h4></h4>" ).text( bl[i].name ).appendTo($('#subbed'));
-                $("<div><p></p></div>").text('This is a place for a more detailed description of your club.').appendTo($('#subbed'));
+                $( "<h4></h4>" ).text( bl[i].name ).appendTo($('#subbed .group:last-child' ));
+                $("<div><p></p></div>").text('This is a place for a more detailed description of your club.').appendTo($('#subbed .group:last-child'));
             }
         }
         else{
+            $('<div class="group">').appendTo($('#notSubbed'))
             if(bl[i].desc != ''){
-                $( "<h4></h4>" ).text( bl[i].desc ).appendTo($('#notSubbed'));
-                $("<div><p></p></div>").text(bl[i].name).appendTo($('#notSubbed'));
+                $( "<h4></h4>" ).text( bl[i].desc ).appendTo($('#notSubbed .group:last-child'));
+                $("<div><p></p></div>").text(bl[i].name).appendTo($('#notSubbed .group:last-child'));
             }
             else{
-                $( "<h4></h4>" ).text( bl[i].name ).appendTo($('#notSubbed'));
-                $("<div><p></p></div>").text('This is a place for a more detailed description of your club.').appendTo($('#notSubbed'));
+                $( "<h4></h4>" ).text( bl[i].name ).appendTo($('#notSubbed .group:last-child'));
+                $("<div><p></p></div>").text('This is a place for a more detailed description of your club.').appendTo($('#notSubbed .group:last-child'));
             }
         }
     }
@@ -160,7 +158,7 @@ function populateAll() {
 // to do all the changes. goes through the subbed list, checks if there are intersections with old unsubbed list, calls appropriate python scripts
 
 function action() {
-    sList = $('#subbed').children('h4');
+    sList = $('#subbed').children('.group').children('h4');
     newSub = [];
     for(var i = 0; i < sList.length; i++){ 
         newSub.push($(sList[i]).text());
