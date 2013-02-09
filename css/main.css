@@ -35,14 +35,14 @@ color: #555555;
 
 #subbed .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
 border: 1px solid #aaaaaa;
-background: rgba(0, 255, 0, .01);
-color: #212121;
+background: rgba(59, 224, 132, .84);
+color: #FFFFFF;
 }
 
 #subbed .ui-widget-content {
 border: 1px solid #aaaaaa;
-background: rgba(0, 255, 0, .01);
-color: #222222;
+background: rgba(120, 231, 67, .95);
+color: #FFFFFF;
 }
 
 #subbed .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
@@ -54,8 +54,8 @@ color: #212121;
 
 #notSubbed .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 border: 1px solid #d3d3d3;
-background: rgba(255, 0, 0, .1);
-color: #555555;
+background: rgba(253, 78, 71, .95);
+color: #FFFFFF;
 }
 
 #notSubbed .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
@@ -72,8 +72,8 @@ color: #222222;
 
 #notSubbed .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
 border: 1px solid #999999;
-background: rgba(255, 0, 0, .2);
-color: #212121;
+background: rgba(204, 66, 66, .95);
+color: #FFFFFF;
 }
 
 /* Gabe Formatting Fix */
