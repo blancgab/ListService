@@ -93,6 +93,19 @@ background: rgba(204, 66, 66, .95);
 color: #FFFFFF;
 }
 
+.hide{
+	visibility: hidden;
+}
+
+.popupDialog{
+	/*TODO*/
+}
+
+.ui-widget-overlay {
+	background: black !important;
+	opacity: .9 !important;
+}
+
 /* Gabe Formatting Fix */
 .navbar .brand {
 	margin-left: 20px;

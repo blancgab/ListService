@@ -39,6 +39,7 @@ var bl = [{"url": "/19c-colloquium", "name": "19c-colloquium", "desc": ""},
 
 var userlist = ["/bhakticlub", "/bionet", "/buddhist-seminar", "/campusincontext", "/caribbeanstudents", "/cblr-editors"];
 var oldSub = ulGetInfo();
+var email;
 
 function ulGetInfo() {
     ulFull = [];
@@ -53,7 +54,28 @@ function ulGetInfo() {
     return ulFull
 };
 
-
+$('#emailDialog').dialog({
+            autoOpen: true,
+            dialogClass: 'popupDialog',
+            draggable: false,
+            resizable: false,
+            modal: true,
+            //width: '300px',
+            title: 'Email',
+            open: function (event, ui) {
+                $('#emailDialog').removeClass('hide');
+            },
+            close: function (event, ui) {
+                $(this).dialog('destroy').remove();
+            },
+            buttons: {
+                'Enter!': function (e) {
+                    email = $('input[name=email]').val();
+                    $(this).dialog('close');
+                    $('#emailDialog').addClass('hide');
+                }
+            }
+        });
 
 populateAll();
 
