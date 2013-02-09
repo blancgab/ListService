@@ -143,6 +143,19 @@ color: #FFFFFF;
 
 
 
+.ui-draggable-helper .ui-widget-content {
+border: 1px solid #aaaaaa;
+background: rgba(255, 255, 255, .01);
+color: #222222;
+}
+
+.ui-draggable-helper .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+border: 1px solid #999999;
+background: rgba(255, 255, 204, 0.9);
+color: black;
+}
+
+
 /* Gabe Formatting Fix */
 .navbar .brand {
 	margin-left: 20px;

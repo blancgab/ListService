@@ -106,9 +106,7 @@ $( "#subbed" )
         helper: 'clone',
         forceHelperSize: true,
         start: function(event, ui){
-            ui.helper.css({
-                /*fix the CSS here*/
-            });
+            ui.helper.addClass('ui-draggable-helper');
         }
     });
 
@@ -131,9 +129,7 @@ $("#notSubbed")
         helper: 'clone',
         forceHelperSize: true,
         start: function(event, ui){
-            ui.helper.css({
-                /*fix the CSS here*/
-            });
+            ui.helper.addClass('ui-draggable-helper');
         }
     });
 
