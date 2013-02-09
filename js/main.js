@@ -226,7 +226,7 @@ function action() {
                 if(newSub[j] == bl[n].name || newSub[j] == bl[n].desc){
                     postUrl = 'https://lists.columbia.edu/mailman/subscribe'+bl[n].url;
                     $.ajax({type: "POST", url: postUrl, data:{'email': email, 'digest':0, 'email-button': 'Subscribe'}})
-                    $( "<li></li>" ).text( 'Unsubscribed from '+newSub[j] ).appendTo($('#actionDialog ul'));
+                    $( "<li></li>" ).text( 'Subscribed to '+newSub[j] ).appendTo($('#actionDialog ul'));
                     console.log(bl[n].url+' has to be subscribed!');
                     break;
                 }
@@ -246,12 +246,11 @@ function action() {
             postUrl = 'https://lists.columbia.edu/mailman/options/cuttc'+oldSub[j].url;
             $.ajax({type: "POST", url: postUrl, data:{'email': email, 'language' : 'en', 'password': '', 'login-unsub' : 'Unsubscribe'}})
             if(oldSub[j].desc != ''){
-                $( "<li></li>" ).text( 'Subscribed to '+ oldSub[j].desc ).appendTo($('#actionDialog ul'));
+                $( "<li></li>" ).text( 'Unsubscribed from '+ oldSub[j].desc ).appendTo($('#actionDialog ul'));
             }
             else{
-                $( "<li></li>" ).text( 'Subscribed to '+ oldSub[j].name ).appendTo($('#actionDialog ul'));
+                $( "<li></li>" ).text( 'Unsubscribed from '+ oldSub[j].name ).appendTo($('#actionDialog ul'));
             }
-            console.log(oldSub[j].url+' has to be unsubscribed!');
         }
     }
 

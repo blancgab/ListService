@@ -155,6 +155,24 @@ background: rgba(255, 255, 204, 0.9);
 color: black;
 }
 
+.ui-draggable-helper h4{
+	font-size: 17.5px;
+	display: block;
+cursor: pointer;
+position: relative;
+margin-top: 2px;
+padding: .5em .5em .5em .7em;
+}
+
+.ui-draggable-helper .ui-accordion-header-icon .ui-icon .ui-icon-triangle-1-e{
+	position: absolute;
+left: .5em;
+top: 50%;
+margin-top: -8px;
+display: block;
+}
+
+
 .ul{
 	list-style-type: circle;
 }
